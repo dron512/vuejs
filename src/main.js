@@ -7,4 +7,4 @@ const app = createApp(App)
 app.provide('msg','msgmsg입니다')
 app.mount('#app')
 
-import 'bootstrap/dist/js/bootstrap.min.js'
+import 'bootstrap/dist/js/bootstrap.min.js';

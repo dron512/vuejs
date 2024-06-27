@@ -12,22 +12,24 @@
         <button 
         class="btn btn-primary m-5"
         @click="$emit('propBChange')">propAChange</button>
-
         <hr>
         {{ emits }}
         <hr>
         {{ $emit }}
+        <h1>{{ msg }}</h1>
     </div>
 </template>
 
 <script setup>
-import { ref, defineProps ,defineEmits } from 'vue'
+import { ref, defineProps ,defineEmits, inject } from 'vue';
+
 const aa = ref('aa msg');
 const props = defineProps({
     propA: String,
     propB: String,
 });
-const emits = defineEmits(["propAChange","propBChange"])
+const emits = defineEmits(["propAChange","propBChange"]);
+const msg = inject('msg');
 </script>
 
 <style lang="scss" scoped>
