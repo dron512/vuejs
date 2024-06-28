@@ -26,11 +26,11 @@ const router = createRouter({
     name: 'BoardInsert',
     component: BoardInsert,
   },{
-    path: '/boardfindone',
+    path: '/boardfindone/:id',
     name: 'BoardFindOne',
     component: BoardFindOne,
   },{
-    path: '/boardupdate',
+    path: '/boardupdate/:id',
     name: 'BoardUpdate',
     component: BoardUpdate,
   },{
