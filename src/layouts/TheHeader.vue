@@ -10,10 +10,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <router-link to="/boardfindall" class="nav-link" active-class="active">freeboard</router-link>
+              <RouterLink to="/boardfindall" class="nav-link" active-class="active">freeboard</RouterLink>
             </li>
             <li class="nav-item">
-              <router-link to="/about" class="nav-link" active-class="active">about</router-link>
+              <RouterLink to="/alcoholfindall" class="nav-link" active-class="active">alcohol</RouterLink>
+            </li>
+            <li class="nav-item">
+              <RouterLink to="/about" class="nav-link" active-class="active">about</RouterLink>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -27,6 +30,8 @@
 </template>
 
 <script setup>
+import { RouterLink } from 'vue-router';
+
 // import {useRouter} from 'vue-router';
 
 // const router = useRouter();

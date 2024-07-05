@@ -5,15 +5,39 @@ import BoardFindAll from './view/board/BoardFindAll.vue';
 import BoardFindOne from './view/board/BoardFindOne.vue';
 import BoardUpdate from './view/board/BoardUpdate.vue';
 import BoardInsert from './view/board/BoardInsert.vue';
+
+import AlcoholFindAll from './view/alcohol/AlcoholFindAll.vue';
+import AlcoholFindOne from './view/alcohol/AlcoholFindOne.vue';
+import AlcoholUpdate from './view/alcohol/AlcoholUpdate.vue';
+import AlcoholInsert from './view/alcohol/AlcoholInsert.vue';
+
 import AboutMe from '@/view/about/AboutMe.vue'
 
-import TheMain from '@/layouts/TheMain.vue';
+import TheMain from '@/view/main/TheMain.vue';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+const alcoholroute = [{
+  path: '/alcoholfindall',
+  name: 'AlcoholFindAll',
+  component: AlcoholFindAll,
+},{
+  path: '/boardinsert',
+  name: 'AlcoholInsert',
+  component: AlcoholInsert,
+},{
+  path: '/boardfindone/:id',
+  name: 'AlcoholFindOne',
+  component: AlcoholFindOne,
+},{
+  path: '/boardupdate/:id',
+  name: 'AlcoholUpdate',
+  component: AlcoholUpdate,
+}];
+
 const router = createRouter({
   history: createWebHistory(),
-  routes: [{
+  routes: [...alcoholroute,{
     path: '/',
     name: 'TheMain',
     component: TheMain,

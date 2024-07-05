@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>BoardInsert</h1>
+    <h1>AlcoholInsert</h1>
     <form>
       <div class="form-group">
         <label for="title">title</label>

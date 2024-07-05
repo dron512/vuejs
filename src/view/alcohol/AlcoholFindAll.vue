@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="d-flex justify-content-between">
-      <h1 class="m-3">BoardFindAll</h1>
+      <h1 class="m-3">AlcoholFindAll</h1>
       <button 
       class="m-3 btn btn-primary"
       @click="goInsertPage"

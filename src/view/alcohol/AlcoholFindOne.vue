@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>BoardFindOne</h1>
+    <h1>AlcoholFindOne</h1>
     <div class="row">
       <p>
       param = {{ $route.params }}<br/>
