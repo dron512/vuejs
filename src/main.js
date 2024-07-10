@@ -22,15 +22,15 @@ const alcoholroute = [{
   name: 'AlcoholFindAll',
   component: AlcoholFindAll,
 },{
-  path: '/boardinsert',
+  path: '/alcoholinsert',
   name: 'AlcoholInsert',
   component: AlcoholInsert,
 },{
-  path: '/boardfindone/:id',
+  path: '/alcoholfindone/:code',
   name: 'AlcoholFindOne',
   component: AlcoholFindOne,
 },{
-  path: '/boardupdate/:id',
+  path: '/alcoholupdate/:code',
   name: 'AlcoholUpdate',
   component: AlcoholUpdate,
 }];

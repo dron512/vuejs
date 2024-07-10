@@ -8,34 +8,40 @@
       >CARD 만들기</button>
     </div>
     <div class="row g-5">
-      <div v-for="card in datas.cards" class="col-3" :key="card.id">
-        <BoardCard
-          :title="card.title"
-          :text="card.text"
-          :id="card.id"
-          :ahref="card.ahref"
-          @click="gofindone(card.id)"
-        ></BoardCard>
+      <div v-for="alcohol in datas" 
+        class="col-3" :key="alcohol.code">
+        <AlcoholItem
+          :code="alcohol.code"
+          :name="alcohol.name"
+          :price="alcohol.price"
+          :picture="alcohol.picture"
+          @click="gofindone(alcohol.code)"
+          >
+        </AlcoholItem>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { datas } from "@/db/data.js";
 import { useRouter } from "vue-router";
-import BoardCard from "@/components/BoardCard.vue";
+import {findAll} from '@/db/alcohol/alcoholaxios.js';
+import { ref, watchEffect } from "vue";
+import AlcoholItem from '@/components/AlcoholItem.vue';
 
 const router = useRouter();
+const datas = ref([]);
 
-datas.cards.forEach((obj) => {
-  console.log(obj);
+watchEffect(async()=>{
+  datas.value = await findAll();
+  console.log(datas.value);
 });
-const gofindone = (id) => {
-  router.push(`boardfindone/${id}`);
+
+const gofindone = (code) => {
+  router.push(`alcoholfindone/${code}`);
 };
 const goInsertPage = ()=>{
-  router.push('boardinsert')
+  router.push('alcoholinsert')
 }
 </script>
 
